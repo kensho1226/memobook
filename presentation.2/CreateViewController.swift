@@ -49,6 +49,16 @@ class CreateViewController: UIViewController {
         titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
         memo.text = saves.string(forKey: "myText"+memoNo)
         super.viewDidLoad()
+        
+//        if colornumber == 0 {
+//            textView.textColor = UIColor.blue
+//        }else if colornumber == 1 {
+//            textView.textColor = UIColor.red
+//        }else if colornumber == 2 {
+//            textView.textColor = UIColor.green
+//        }else{
+//            textView.textColor = UIColor.white
+//        }
     }
     
     override func didReceiveMemoryWarning() {

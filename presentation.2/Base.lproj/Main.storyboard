@@ -13,14 +13,8 @@
         <array key="NotoSansCJKjp-Bold.otf">
             <string>NotoSansCJKjp-Bold</string>
         </array>
-        <array key="NotoSansCJKjp-Light.otf">
-            <string>NotoSansCJKjp-Light</string>
-        </array>
-        <array key="NotoSansCJKjp-Medium.otf">
-            <string>NotoSansCJKjp-Medium</string>
-        </array>
-        <array key="Oranienbaum.ttf">
-            <string>Oranienbaum</string>
+        <array key="PT_Serif-Web-Bold.ttf">
+            <string>PTSerif-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -40,10 +34,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-hS-3ar">
-                                <rect key="frame" x="120" y="409" width="116" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memo book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-VN-edV">
+                                <rect key="frame" x="35" y="119" width="305" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="PTSerif-Bold" family="PT Serif" pointSize="54"/>
+                                <color key="textColor" red="0.95899301767349243" green="0.9554402232170105" blue="0.98392802476882935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-hS-3ar">
+                                <rect key="frame" x="118" y="396" width="138" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PTSerif-Bold" family="PT Serif" pointSize="32"/>
                                 <state key="normal" title="start">
                                     <color key="titleColor" red="0.97999030351638794" green="0.98121160268783569" blue="0.99185818433761597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -51,13 +52,6 @@
                                     <segue destination="Plo-wm-1Rj" kind="modal" id="Df2-5a-zOp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ帳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-VN-edV">
-                                <rect key="frame" x="77" y="129" width="202" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Light" family="Noto Sans CJK JP" pointSize="45"/>
-                                <color key="textColor" red="0.95899301767349243" green="0.9554402232170105" blue="0.98392802476882935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -157,27 +151,33 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="テキストの色を変える" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EX6-oh-qnl">
-                                <rect key="frame" x="16" y="86" width="178" height="40"/>
+                                <rect key="frame" x="16" y="86" width="229" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="17"/>
-                                <color key="textColor" white="0.85358173076923072" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqy-r4-P5k">
                                 <rect key="frame" x="31" y="153" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Medium" family="Noto Sans CJK JP" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="17"/>
                                 <state key="normal" title="赤色に変える">
                                     <color key="titleColor" red="0.8818851113319397" green="0.48272417053198752" blue="0.37017647939876008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tored" destination="h6b-df-RnH" eventType="touchUpInside" id="pFK-Qs-W2U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-Og-P3W">
                                 <rect key="frame" x="52" y="200" width="109" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="17"/>
                                 <state key="normal" title="青色に変える">
                                     <color key="titleColor" red="0.6645690321673311" green="0.72945486150634675" blue="0.8818851113319397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="toblue" destination="h6b-df-RnH" eventType="touchUpInside" id="DQV-De-5Wy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stn-27-k3N">
                                 <rect key="frame" x="46" y="241" width="120" height="33"/>
@@ -186,6 +186,9 @@
                                 <state key="normal" title="緑色に変える">
                                     <color key="titleColor" red="0.49701194676095273" green="0.8818851113319397" blue="0.5008521373039132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="togreen" destination="h6b-df-RnH" eventType="touchUpInside" id="HmG-U2-1sL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny1-Oz-wmi">
                                 <rect key="frame" x="55" y="282" width="102" height="30"/>
@@ -194,6 +197,9 @@
                                 <state key="normal" title="白色に変える">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="towhite" destination="h6b-df-RnH" eventType="touchUpInside" id="E7Y-gX-HAa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,14 +226,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wg0-a7-HZD">
-                                <rect key="frame" x="104" y="129" width="167" height="30"/>
+                                <rect key="frame" x="104" y="110" width="167" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7y-OK-oW4" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="0.0" y="193" width="375" height="385"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="356"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.99990254640579224" green="1" blue="0.99988251924514771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -28,22 +28,38 @@ class OptionViewController: UIViewController {
     }
     
     @IBAction func towhite () {
-        colornumber = 0
-        saves.
-    }
-    
-    @IBAction func tored () {
-        colornumber = 1
-    }
-    
-    @IBAction func togreen() {
-        colornumber = 2
-    }
-    
-    @IBAction func toblue () {
         colornumber = 3
+       saves.set(colornumber, forKey: "color")
+        
+        // アラートを作成
+        let alert = UIAlertController(
+            title: "削除", message: "消去しました", preferredStyle: .alert)
+        
+        // アラートにボタンをつける
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            self.dismiss(animated: true, completion: nil)}))
+        
+        // アラート表示
+        self.present(alert, animated: true, completion: nil)
     }
-    
+
+    }
+
+//    @IBAction func tored () {
+//        colornumber = 1
+//        saves.set(colornumber, forKey: "color")
+//    }
+//    
+//    @IBAction func togreen() {
+//        colornumber = 2
+//        saves.set(colornumber, forKey: "color")
+//    }
+//    
+//    @IBAction func toblue () {
+//        colornumber = 0
+//        saves.set(colornumber, forKey: "color")
+//    }
+//    
 
     /*
     // MARK: - Navigation
@@ -55,4 +71,4 @@ class OptionViewController: UIViewController {
     }
     */
 
-}
+

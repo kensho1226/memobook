@@ -14,6 +14,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var memoNo = ""
     
+    var zoomTransition:LCZoomTransition!
+    
     var saves = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -30,6 +32,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.45, green: 0.45, blue: 0.45, alpha: 0.7)
         //アイテム
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        //NavigationControllerにLCZoomTransitionの設定をする
+        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
     //データの更新
     override func viewWillAppear(_ animated: Bool){
@@ -73,6 +78,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "toCreate" {
             let subVC: CreateViewController = (segue.destination as? CreateViewController)!
             subVC.memoNo = self.memoNo
+            //遷移で戻ってくる場所の記録のための設定
+            zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
         }
     }
     

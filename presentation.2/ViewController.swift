@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LCZoom
+//import LCZoomTransition
 
 class ViewController: UIViewController {
 

@@ -56,6 +56,10 @@
 		221EDB241E9368080055EF38 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
 		221EDB261E936D6F0055EF38 /* Oranienbaum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oranienbaum.ttf; sourceTree = "<group>"; };
 		221EDB281E9372390055EF38 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		22420AF31EE950EC0012214F /* PT_Serif-Web-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Serif-Web-Bold.ttf"; sourceTree = "<group>"; };
+		22420AF41EE950EC0012214F /* PT_Serif-Web-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Serif-Web-BoldItalic.ttf"; sourceTree = "<group>"; };
+		22420AF51EE950EC0012214F /* PT_Serif-Web-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Serif-Web-Italic.ttf"; sourceTree = "<group>"; };
+		22420AF61EE950EC0012214F /* PT_Serif-Web-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT_Serif-Web-Regular.ttf"; sourceTree = "<group>"; };
 		226DFEB11E9222BA002C4EF4 /* presentation.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = presentation.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226DFEB41E9222BA002C4EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		226DFEB61E9222BA002C4EF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,10 @@
 				221EDB241E9368080055EF38 /* images.jpg */,
 				221EDB221E9347310055EF38 /* gray.jpg */,
 				221EDB201E9342410055EF38 /* aaaaaaa.png */,
+				22420AF31EE950EC0012214F /* PT_Serif-Web-Bold.ttf */,
+				22420AF41EE950EC0012214F /* PT_Serif-Web-BoldItalic.ttf */,
+				22420AF51EE950EC0012214F /* PT_Serif-Web-Italic.ttf */,
+				22420AF61EE950EC0012214F /* PT_Serif-Web-Regular.ttf */,
 				221EDB261E936D6F0055EF38 /* Oranienbaum.ttf */,
 				226DFEE61E92258F002C4EF4 /* NotoSansCJKjp-Black.otf */,
 				226DFEE71E92258F002C4EF4 /* NotoSansCJKjp-Bold.otf */,
@@ -500,7 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.presentation-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "presentation.2/Bridging-Header.h\n";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/keniku_macbook/Desktop/new/presentation.2/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -513,7 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.litech.presentation-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "presentation.2/Bridging-Header.h\n";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/keniku_macbook/Desktop/new/presentation.2/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
