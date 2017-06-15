@@ -8,11 +8,15 @@
 
 import UIKit
 
-class OptionViewController: UIViewController {
+class OptionViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var saves = UserDefaults.standard
     
     var colornumber:Int = 0
+    
+    var imageView = UIImageView()
+    
+    var imagePickerController: UIImagePickerController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,14 @@ class OptionViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         colornumber = saves.integer(forKey: "color")
+        imagePickerController.sourceType =
+            
+            UIImagePickerControllerSourceType.photoLibrary
+
+        
+        self.present(imagePickerController, animated: true, completion: nil)
+        
+        imagePickerController.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +53,24 @@ class OptionViewController: UIViewController {
         
         // アラート表示
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func photo () {
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var image: UIImage =
+            
+            info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        imageView.image = image
+        
+        self.dismiss(animated: true, completion: nil)
+        
     }
 
     }
