@@ -19,6 +19,8 @@ class CreateViewController: UIViewController {
     
     @IBOutlet var titleTextField: UITextField!
     
+    var titlenamearray:[String] = []
+    
     //NSUserDefaultsを宣言
     let saves = UserDefaults.standard
     
@@ -26,6 +28,8 @@ class CreateViewController: UIViewController {
     @IBAction func saveButton(sender: AnyObject) {
         saves.set(memo.text, forKey: "myText"+memoNo)
         saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
+        titlenamearray.append(titleTextField.text!)
+        saves.set(titlenamearray, forKey: "titlearray")
         
         // アラートを作成
         let alert = UIAlertController(
@@ -48,6 +52,13 @@ class CreateViewController: UIViewController {
         saves.register(defaults: ["myTitle"+memoNo:""])
         titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
         memo.text = saves.string(forKey: "myText"+memoNo)
+        
+        if  saves.object(forKey: "titlearray") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        }else{
+            titlenamearray = []
+        }
+        
         super.viewDidLoad()
         
 //        if colornumber == 0 {

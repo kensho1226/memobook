@@ -15,23 +15,13 @@ class OptionViewController: UIViewController ,UIImagePickerControllerDelegate, U
     var colornumber:Int = 0
     
     var imageView = UIImageView()
-    
-    var imagePickerController: UIImagePickerController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        imageView.image = saves.object(forKey: "image") as? UIImage
         colornumber = saves.integer(forKey: "color")
-        imagePickerController.sourceType =
-            
-            UIImagePickerControllerSourceType.photoLibrary
-
-        
-        self.present(imagePickerController, animated: true, completion: nil)
-        
-        imagePickerController.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +45,17 @@ class OptionViewController: UIViewController ,UIImagePickerControllerDelegate, U
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func photo () {
+    @IBAction func selectimage () {
+        //UIImagePickerControllerのインスタンスを作る
+        let imagePickerController: UIImagePickerController = UIImagePickerController()
+        
+        //フォトライブラリを使う設定をする
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        
+        //フォトライブラリを呼び出す
+        self.present(imagePickerController, animated: true, completion: nil)
         
     }
     
@@ -63,15 +63,18 @@ class OptionViewController: UIViewController ,UIImagePickerControllerDelegate, U
                                
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        var image: UIImage =
+        let selectimage: UIImage =
             
             info[UIImagePickerControllerEditedImage] as! UIImage
         
-        imageView.image = image
+        imageView.image = selectimage
         
         self.dismiss(animated: true, completion: nil)
         
+        saves.set(imageView.image, forKey: "image")
+        
     }
+
 
     }
 

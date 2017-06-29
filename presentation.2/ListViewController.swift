@@ -14,12 +14,22 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var memoNo = ""
     
-    var zoomTransition:LCZoomTransition!
+//    var zoomTransition:LCZoomTransition!
     
     var saves = UserDefaults.standard
     
+    var titlenamearray:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if  saves.object(forKey: "titlearray") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        }else{
+            titlenamearray = []
+        }
+        
+        
         
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
@@ -34,7 +44,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         //NavigationControllerにLCZoomTransitionの設定をする
-        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
+//        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
     //データの更新
     override func viewWillAppear(_ animated: Bool){
@@ -49,7 +59,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //セルの総数を設定するメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return titlenamearray.count
     }
     
     //セルの値を設定するメソッド
@@ -58,7 +68,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Cellのフォント
         cell.textLabel!.font = UIFont(name: "Noto Sans CJK JP Bold", size: 20)
         //cellのタイトル
-        cell.textLabel!.text = saves.string(forKey: "myTitle"+String(indexPath.row))
+        cell.textLabel!.text = titlenamearray[indexPath.row]
         
        
         
@@ -79,7 +89,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let subVC: CreateViewController = (segue.destination as? CreateViewController)!
             subVC.memoNo = self.memoNo
             //遷移で戻ってくる場所の記録のための設定
-            zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
+//            zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
         }
     }
     
