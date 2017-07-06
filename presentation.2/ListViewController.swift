@@ -13,12 +13,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var table: UITableView!
     
     var memoNo = ""
-    
 //    var zoomTransition:LCZoomTransition!
     
     var saves = UserDefaults.standard
     
     var titlenamearray:[String] = []
+    var memoarray:[String]  = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +70,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.textLabel!.font = UIFont(name: "Noto Sans CJK JP Bold", size: 20)
         //cellのタイトル
         cell.textLabel!.text = titlenamearray[indexPath.row]
-        
-       
         
         return cell
     }

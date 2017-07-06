@@ -13,9 +13,6 @@
         <array key="NotoSansCJKjp-Bold.otf">
             <string>NotoSansCJKjp-Bold</string>
         </array>
-        <array key="NotoSansCJKjp-Light.otf">
-            <string>NotoSansCJKjp-Light</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -37,14 +34,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memo book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-VN-edV">
                                 <rect key="frame" x="35" y="119" width="305" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="51"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="51"/>
                                 <color key="textColor" red="0.95899301767349243" green="0.9554402232170105" blue="0.98392802476882935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgU-hS-3ar">
                                 <rect key="frame" x="118" y="396" width="138" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="32"/>
                                 <state key="normal" title="start">
                                     <color key="titleColor" red="0.97999030351638794" green="0.98121160268783569" blue="0.99185818433761597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -107,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VI-24-Kpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600.8" y="-522.18890554722645"/>
+            <point key="canvasLocation" x="1604" y="854"/>
         </scene>
         <!--Title-->
         <scene sceneID="ocv-4U-GDf">
@@ -140,17 +137,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyN-qv-xUT" id="BsR-V7-R5u">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62O-hc-MZG">
-                                                    <rect key="frame" x="272" y="8" width="34" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="NotoSansCJKjp-Light" family="Noto Sans CJK JP" pointSize="16"/>
-                                                    <state key="normal" title="設定"/>
-                                                    <connections>
-                                                        <segue destination="f0j-4a-4wg" kind="modal" id="Rra-eN-qYd"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -163,6 +149,9 @@
                                     <navigationItem title="Title" id="8br-8R-pM3">
                                         <barButtonItem key="leftBarButtonItem" title="設定" id="wZn-PC-Q2G">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="f0j-4a-4wg" kind="modal" id="UKW-B8-8oP"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -215,7 +204,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7y-OK-oW4" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="0.0" y="165" width="375" height="356"/>
+                                <rect key="frame" x="13" y="170" width="348" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.99990254640579224" green="1" blue="0.99988251924514771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +231,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="memo" destination="v7y-OK-oW4" id="THc-d8-krq"/>
+                        <outlet property="memo" destination="v7y-OK-oW4" id="wIS-2P-zqR"/>
                         <outlet property="titleTextField" destination="wg0-a7-HZD" id="Fyi-ar-Xwb"/>
                     </connections>
                 </viewController>
@@ -255,7 +244,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Plo-wm-1Rj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FSc-qq-Tdy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FSc-qq-Tdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

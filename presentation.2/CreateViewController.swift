@@ -17,18 +17,29 @@ class CreateViewController: UIViewController {
     
     var textView: UITextView!
     
+    //メモ
+    @IBOutlet weak var memo: UITextView!
+    
+    
     @IBOutlet var titleTextField: UITextField!
     
     var titlenamearray:[String] = []
+    
+    var memoarray:[String] = []
+    
+    var titlenamearraycount:Int = 0
     
     //NSUserDefaultsを宣言
     let saves = UserDefaults.standard
     
     //保存
     @IBAction func saveButton(sender: AnyObject) {
-        saves.set(memo.text, forKey: "myText"+memoNo)
-        saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
+//        saves.set(memo.text, forKey: "myText"+memoNo)
+//        saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
+        
         titlenamearray.append(titleTextField.text!)
+        memoarray.append(textView.text!)
+        saves.set(memoarray, forKey: "memo")
         saves.set(titlenamearray, forKey: "titlearray")
         
         // アラートを作成
@@ -42,16 +53,26 @@ class CreateViewController: UIViewController {
         // アラート表示
         self.present(alert, animated: true, completion: nil)
     }
-    //メモ
-    @IBOutlet weak var memo: UITextView!
-    
+ 
     
     override func viewDidLoad() {
-        colornumber = saves.integer(forKey: "color")
-        saves.register(defaults: ["myText"+memoNo:""])
-        saves.register(defaults: ["myTitle"+memoNo:""])
-        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
-        memo.text = saves.string(forKey: "myText"+memoNo)
+        titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        
+        if saves.object(forKey: "memo") != nil {
+            memoarray = saves.object(forKey: "memo") as! [String]
+            textView.text = String(memoarray[Int(memoNo)!])
+        }else{
+            memoarray = []
+            memo.text = ""
+        }
+        
+        titleTextField.text = String(titlenamearray[Int(memoNo)!])
+        
+//        colornumber = saves.integer(forKey: "color")
+//        saves.register(defaults: ["myText"+memoNo:""])
+//        saves.register(defaults: ["myTitle"+memoNo:""])
+//        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
+//        memo.text = saves.string(forKey: "myText"+memoNo)
         
         if  saves.object(forKey: "titlearray") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray") as! [String]
@@ -77,8 +98,14 @@ class CreateViewController: UIViewController {
     }
     
     @IBAction func deletememo () {
-        saves.removeObject(forKey: "myTitle"+memoNo)
-        saves.removeObject(forKey: "myText"+memoNo)
+//        saves.removeObject(forKey: "myTitle"+memoNo)
+//        saves.removeObject(forKey: "myText"+memoNo)
+        
+        titlenamearray.remove(at: Int(memoNo)!)
+        memoarray.remove(at: Int(memoNo)!)
+        
+        saves.set(titlenamearray, forKey: "titlearray")
+        saves.set(memoarray, forKey: "memo")
         
         // アラートを作成
         let alert = UIAlertController(
