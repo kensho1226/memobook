@@ -36,37 +36,61 @@ class CreateViewController: UIViewController {
     @IBAction func saveButton(sender: AnyObject) {
 //        saves.set(memo.text, forKey: "myText"+memoNo)
 //        saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
+        if titleTextField.text == nil {
+           
+            let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
+            // アラートにボタンをつける
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+                self.dismiss(animated: true, completion: nil)}))
+            
+            // アラート表示
+            self.present(alert, animated: true, completion: nil)
+            
+        }else{
+            if memo.text == nil {
+                let alert: UIAlertController = UIAlertController(title: "保存できません", message: "本文を入力してください。", preferredStyle: .alert)
+                
+                // アラートにボタンをつける
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+                    self.dismiss(animated: true, completion: nil)}))
+                
+                // アラート表示
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                titlenamearray.append(titleTextField.text!)
+                memoarray.append(textView.text!)
+                saves.set(memoarray, forKey: "memo")
+                saves.set(titlenamearray, forKey: "titlearray")
+                
+                // アラートを作成
+                let alert = UIAlertController(
+                    title: "保存完了", message: "保存しました", preferredStyle: .alert)
+                
+                // アラートにボタンをつける
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+                    self.dismiss(animated: true, completion: nil)}))
+                
+                // アラート表示
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
         
-        titlenamearray.append(titleTextField.text!)
-        memoarray.append(textView.text!)
-        saves.set(memoarray, forKey: "memo")
-        saves.set(titlenamearray, forKey: "titlearray")
-        
-        // アラートを作成
-        let alert = UIAlertController(
-            title: "保存完了", message: "保存しました", preferredStyle: .alert)
-        
-        // アラートにボタンをつける
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
-            self.dismiss(animated: true, completion: nil)}))
-        
-        // アラート表示
-        self.present(alert, animated: true, completion: nil)
     }
- 
     
     override func viewDidLoad() {
         titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        print("Title: ", titlenamearray)
+        print("memo: ", titlenamearray)
         
-        if saves.object(forKey: "memo") != nil {
+        if saves.object(forKey: "memo") != nil && titlenamearray.count != 0{
             memoarray = saves.object(forKey: "memo") as! [String]
-            textView.text = String(memoarray[Int(memoNo)!])
+            print(memoarray)
+            titleTextField.text = String(titlenamearray[Int(memoNo)!])
+            memo.text = String(memoarray[Int(memoNo)!])
         }else{
             memoarray = []
             memo.text = ""
         }
-        
-        titleTextField.text = String(titlenamearray[Int(memoNo)!])
         
 //        colornumber = saves.integer(forKey: "color")
 //        saves.register(defaults: ["myText"+memoNo:""])

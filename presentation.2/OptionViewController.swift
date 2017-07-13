@@ -51,17 +51,15 @@ class OptionViewController: UIViewController ,UIImagePickerControllerDelegate, U
         
         //フォトライブラリを使う設定をする
         imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
         
         //フォトライブラリを呼び出す
         self.present(imagePickerController, animated: true, completion: nil)
         
     }
     
-    func imagePickerController(_ picker: UIImagePickerController,
-                               
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let selectimage: UIImage =
             

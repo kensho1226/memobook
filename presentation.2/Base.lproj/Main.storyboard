@@ -150,6 +150,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="設定" id="wZn-PC-Q2G">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
+                                                <action selector="option" destination="mkK-UN-AnE" id="69C-2H-q9Y"/>
                                                 <segue destination="f0j-4a-4wg" kind="modal" id="UKW-B8-8oP"/>
                                             </connections>
                                         </barButtonItem>
@@ -231,7 +232,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="memo" destination="v7y-OK-oW4" id="wIS-2P-zqR"/>
+                        <outlet property="memo" destination="v7y-OK-oW4" id="RfD-LW-m97"/>
                         <outlet property="titleTextField" destination="wg0-a7-HZD" id="Fyi-ar-Xwb"/>
                     </connections>
                 </viewController>
