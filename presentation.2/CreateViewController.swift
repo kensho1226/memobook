@@ -53,12 +53,11 @@ class CreateViewController: UIViewController {
                 // アラートにボタンをつける
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
                     self.dismiss(animated: true, completion: nil)}))
-                
                 // アラート表示
                 self.present(alert, animated: true, completion: nil)
             }else{
                 titlenamearray.append(titleTextField.text!)
-                memoarray.append(textView.text!)
+                memoarray.append(memo.text!)
                 saves.set(memoarray, forKey: "memo")
                 saves.set(titlenamearray, forKey: "titlearray")
                 
@@ -78,25 +77,34 @@ class CreateViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        
         titlenamearray = saves.object(forKey: "titlearray") as! [String]
         print("Title: ", titlenamearray)
         print("memo: ", titlenamearray)
+    
         
-        if saves.object(forKey: "memo") != nil && titlenamearray.count != 0{
+        if saves.object(forKey: "memo") != nil && titlenamearray.count != 0 && memoNo != ""{
             memoarray = saves.object(forKey: "memo") as! [String]
             print(memoarray)
-            titleTextField.text = String(titlenamearray[Int(memoNo)!])
+            titleTextField.text = String(titlenamearray[Int(memoNo)!])!
+            memo.text = String(memoarray[Int(memoNo)!])
+        }else if saves.object(forKey: "memo") != nil && titlenamearray.count != 0{
+            memoNo = "0"
+            memoarray = saves.object(forKey: "memo") as! [String]
+            print(memoarray)
+            titleTextField.text = String(titlenamearray[Int(memoNo)!])!
             memo.text = String(memoarray[Int(memoNo)!])
         }else{
-            memoarray = []
-            memo.text = ""
+            self.memoarray = []
+            self.memo.text = ""
         }
         
-//        colornumber = saves.integer(forKey: "color")
-//        saves.register(defaults: ["myText"+memoNo:""])
-//        saves.register(defaults: ["myTitle"+memoNo:""])
-//        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
-//        memo.text = saves.string(forKey: "myText"+memoNo)
+        colornumber = saves.integer(forKey: "color")
+        saves.register(defaults: ["myText"+memoNo:""])
+        saves.register(defaults: ["myTitle"+memoNo:""])
+        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
+        memo.text = saves.string(forKey: "myText"+memoNo)
         
         if  saves.object(forKey: "titlearray") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray") as! [String]

@@ -45,7 +45,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         //NavigationControllerにLCZoomTransitionの設定をする
-//        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
+//      zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
     //データの更新
     override func viewWillAppear(_ animated: Bool){
@@ -79,6 +79,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.memoNo = String(indexPath.row)
+        if memoNo == nil {
+            memoNo = "0"
+        }
         self.performSegue(withIdentifier: "toCreate", sender: nil)
     }
     
@@ -88,7 +91,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let subVC: CreateViewController = (segue.destination as? CreateViewController)!
             subVC.memoNo = self.memoNo
             //遷移で戻ってくる場所の記録のための設定
-//            zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
+//          zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
         }
     }
     
