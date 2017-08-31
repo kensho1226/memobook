@@ -1,15 +1,15 @@
 //
-//  ListViewController.swift
+//  List3ViewController.swift
 //  presentation.2
 //
-//  Created by keniku_macbook on 2017/04/03.
+//  Created by keniku_macbook on 2017/08/05.
 //  Copyright © 2017年 keniku_macbook. All rights reserved.
 //
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class List3ViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet var table: UITableView!
     
     var memoNo = ""
@@ -24,8 +24,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if  saves.object(forKey: "titlearray") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        if  saves.object(forKey: "titlearray3") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray3") as! [String]
         }else{
             titlenamearray = [""]
         }
@@ -43,7 +43,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.tintColor = UIColor.black
         
         //NavigationControllerにLCZoomTransitionの設定をする
-     zoomTransition = LCZoomTransition(navigationController: self.navigationController)
+        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
     //データの更新
     override func viewWillAppear(_ animated: Bool){
@@ -77,18 +77,18 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.memoNo = String(indexPath.row)
-        self.performSegue(withIdentifier: "toCreate", sender: nil)
+        self.performSegue(withIdentifier: "toCreate3", sender: nil)
     }
     
     @IBAction func memoplus () {
         memoNo = ""
-        performSegue(withIdentifier: "toCreate", sender: self)
+        performSegue(withIdentifier: "toCreate3", sender: self)
     }
     
     // Segueを設定
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCreate" {
-            let subVC: CreateViewController = (segue.destination as? CreateViewController)!
+        if segue.identifier == "toCreate3" {
+            let subVC: Create3ViewController = (segue.destination as? Create3ViewController)!
             subVC.memoNo = self.memoNo
             //遷移で戻ってくる場所の記録のための設定
             zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)

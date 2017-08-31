@@ -10,5 +10,4 @@
 #define presentation_Bridging_Header_h
 
 #import "LCZoomTransition.h"
-
 #endif

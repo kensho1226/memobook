@@ -1,20 +1,18 @@
 //
-//  CreateViewController.swift
+//  Create1ViewController.swift
 //  presentation.2
 //
-//  Created by keniku_macbook on 2017/04/03.
+//  Created by keniku_macbook on 2017/08/05.
 //  Copyright © 2017年 keniku_macbook. All rights reserved.
 //
 
 import UIKit
 import Accounts
 
-class CreateViewController: UIViewController {
-    
+class Create1ViewController: UIViewController {
+
     //メモNo
     var memoNo = ""
-    var zoomTransition:LCZoomTransition!
-
     
     var colornumber:Int = 0
     
@@ -37,10 +35,10 @@ class CreateViewController: UIViewController {
     
     //保存
     @IBAction func saveButton(sender: AnyObject) {
-//        saves.set(memo.text, forKey: "myText"+memoNo)
-//        saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
+        //        saves.set(memo.text, forKey: "myText"+memoNo)
+        //        saves.set(titleTextField.text, forKey: "myTitle"+memoNo)
         if (titleTextField.text?.isEmpty)!{
-           
+            
             let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
             // アラートにボタンをつける
             alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -59,8 +57,8 @@ class CreateViewController: UIViewController {
             }else if memoNo != "0"{
                 titlenamearray[Int(memoNo)!] = titleTextField.text!
                 memoarray[Int(memoNo)!] = memo.text!
-                saves.set(memoarray, forKey: "memo")
-                saves.set(titlenamearray, forKey: "titlearray")
+                saves.set(memoarray, forKey: "memo1")
+                saves.set(titlenamearray, forKey: "titlearray1")
                 titleTextField.text = ""
                 memo.text = ""
                 
@@ -77,8 +75,8 @@ class CreateViewController: UIViewController {
             }else {
                 titlenamearray.append(titleTextField.text!)
                 memoarray.append(memo.text!)
-                saves.set(memoarray, forKey: "memo")
-                saves.set(titlenamearray, forKey: "titlearray")
+                saves.set(memoarray, forKey: "memo1")
+                saves.set(titlenamearray, forKey: "titlearray1")
                 titleTextField.text = ""
                 memo.text = ""
                 
@@ -92,7 +90,7 @@ class CreateViewController: UIViewController {
                 
                 // アラート表示
                 self.present(alert, animated: true, completion: nil)
-
+                
             }
         }
         
@@ -100,20 +98,19 @@ class CreateViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        
-        titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        titlenamearray = saves.object(forKey: "titlearray1") as! [String]
         print("Title: ", titlenamearray)
         print("memo: ", titlenamearray)
-    
         
-        if saves.object(forKey: "memo") != nil && titlenamearray.count != 0 && memoNo != ""{
-            memoarray = saves.object(forKey: "memo") as! [String]
+        
+        if saves.object(forKey: "memo1") != nil && titlenamearray.count != 0 && memoNo != ""{
+            memoarray = saves.object(forKey: "memo1") as! [String]
             print(memoarray)
             titleTextField.text = String(titlenamearray[Int(memoNo)!])!
             memo.text = String(memoarray[Int(memoNo)!])
-        }else if saves.object(forKey: "memo") != nil && titlenamearray.count != 0{
+        }else if saves.object(forKey: "memo1") != nil && titlenamearray.count != 0{
             memoNo = "0"
-            memoarray = saves.object(forKey: "memo") as! [String]
+            memoarray = saves.object(forKey: "memo1") as! [String]
             print(memoarray)
             titleTextField.text = String(titlenamearray[Int(memoNo)!])!
             memo.text = String(memoarray[Int(memoNo)!])
@@ -128,30 +125,30 @@ class CreateViewController: UIViewController {
             self.titleTextField.text = ""
         }
         
-//
-//        colornumber = saves.integer(forKey: "color")
-//        saves.register(defaults: ["myText"+memoNo:""])
-//        saves.register(defaults: ["myTitle"+memoNo:""])
-//        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
-//        memo.text = saves.string(forKey: "myText"+memoNo)
+        //
+        //        colornumber = saves.integer(forKey: "color")
+        //        saves.register(defaults: ["myText"+memoNo:""])
+        //        saves.register(defaults: ["myTitle"+memoNo:""])
+        //        titleTextField.text = saves.string(forKey: "myTitle"+memoNo)
+        //        memo.text = saves.string(forKey: "myText"+memoNo)
         
-        if  saves.object(forKey: "titlearray") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        if  saves.object(forKey: "titlearray1") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray1") as! [String]
         }else{
             titlenamearray = []
         }
         
         super.viewDidLoad()
         
-//        if colornumber == 0 {
-//            textView.textColor = UIColor.blue
-//        }else if colornumber == 1 {
-//            textView.textColor = UIColor.red
-//        }else if colornumber == 2 {
-//            textView.textColor = UIColor.green
-//        }else{
-//            textView.textColor = UIColor.white
-//        }
+        //        if colornumber == 0 {
+        //            textView.textColor = UIColor.blue
+        //        }else if colornumber == 1 {
+        //            textView.textColor = UIColor.red
+        //        }else if colornumber == 2 {
+        //            textView.textColor = UIColor.green
+        //        }else{
+        //            textView.textColor = UIColor.white
+        //        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -159,8 +156,8 @@ class CreateViewController: UIViewController {
     }
     
     @IBAction func deletememo () {
-//        saves.removeObject(forKey: "myTitle"+memoNo)
-//        saves.removeObject(forKey: "myText"+memoNo)
+        //        saves.removeObject(forKey: "myTitle"+memoNo)
+        //        saves.removeObject(forKey: "myText"+memoNo)
         
         print(memoNo)
         
@@ -178,8 +175,8 @@ class CreateViewController: UIViewController {
         titlenamearray.remove(at: Int(memoNo)!)
         memoarray.remove(at: Int(memoNo)!)
         
-        saves.set(titlenamearray, forKey: "titlearray")
-        saves.set(memoarray, forKey: "memo")
+        saves.set(titlenamearray, forKey: "titlearray1")
+        saves.set(memoarray, forKey: "memo1")
         
         // アラートを作成
         let alert = UIAlertController(
@@ -217,16 +214,4 @@ class CreateViewController: UIViewController {
         // UIActivityViewControllerを表示
         self.present(activityVC, animated: true, completion: nil)
     }
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-
+}

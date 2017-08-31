@@ -10,15 +10,44 @@ import UIKit
 //import LCZoomTransition
 
 class ViewController: UIViewController {
-
+    
+    var saves = UserDefaults.standard
+    var zoomTransition:LCZoomTransition!
+    
+    @IBOutlet var label1:UILabel!
+    @IBOutlet var label2:UILabel!
+    @IBOutlet var label3:UILabel!
+    @IBOutlet var label4:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        label1.text = saves.object(forKey: "label1") as? String
+//        label2.text = saves.object(forKey: "label2") as? String
+//        label3.text = saves.object(forKey: "label3") as? String
+//        label4.text = saves.object(forKey: "label4") as? String
+        
+        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //データの更新
+    override func viewWillAppear(_ animated: Bool){
+        super.viewDidDisappear(animated)
+        label1.text = saves.object(forKey: "label1") as? String
+        label2.text = saves.object(forKey: "label2") as? String
+        label3.text = saves.object(forKey: "label3") as? String
+        label4.text = saves.object(forKey: "label4") as? String
+
+    }
+    
+    @IBAction func setting () {
+        performSegue(withIdentifier: "toSet", sender: self)
     }
 
 
