@@ -11,7 +11,6 @@ import UIKit
 class settingViewController: UIViewController {
     
     var saves = UserDefaults.standard
-    var zoomTransition:LCZoomTransition!
     
     @IBOutlet var label1:UITextField!
     @IBOutlet var label2:UITextField!
@@ -26,8 +25,6 @@ class settingViewController: UIViewController {
         label2.text = saves.object(forKey: "label2") as? String
         label3.text = saves.object(forKey: "label3") as? String
         label4.text = saves.object(forKey: "label4") as? String
-        
-        zoomTransition = LCZoomTransition(navigationController: self.navigationController)
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,11 +75,14 @@ class settingViewController: UIViewController {
             
             // アラート表示
             self.present(alert, animated: true, completion: nil)
-        
     }
     
     @IBAction func back () {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewDidDisappear(animated)
     }
     
 

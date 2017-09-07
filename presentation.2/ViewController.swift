@@ -43,12 +43,18 @@ class ViewController: UIViewController {
         label2.text = saves.object(forKey: "label2") as? String
         label3.text = saves.object(forKey: "label3") as? String
         label4.text = saves.object(forKey: "label4") as? String
-
     }
+
     
     @IBAction func setting () {
         performSegue(withIdentifier: "toSet", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCreate" {
+        }
+    }
+
 
 
 }

@@ -46,6 +46,7 @@
 		226DFEF51E92258F002C4EF4 /* NotoSansCJKjp-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEEC1E92258F002C4EF4 /* NotoSansCJKjp-Thin.otf */; };
 		226DFEF61E92258F002C4EF4 /* NotoSansMonoCJKjp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEED1E92258F002C4EF4 /* NotoSansMonoCJKjp-Bold.otf */; };
 		226DFEF71E92258F002C4EF4 /* NotoSansMonoCJKjp-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEEE1E92258F002C4EF4 /* NotoSansMonoCJKjp-Regular.otf */; };
+		22A202831F6157FE007B861E /* TempleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A202821F6157FE007B861E /* TempleViewController.swift */; };
 		22BF112A1F050ADA00ED0EEA /* LCZoomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BF11291F050ADA00ED0EEA /* LCZoomTransition.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		226DFEEC1E92258F002C4EF4 /* NotoSansCJKjp-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKjp-Thin.otf"; sourceTree = "<group>"; };
 		226DFEED1E92258F002C4EF4 /* NotoSansMonoCJKjp-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKjp-Bold.otf"; sourceTree = "<group>"; };
 		226DFEEE1E92258F002C4EF4 /* NotoSansMonoCJKjp-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKjp-Regular.otf"; sourceTree = "<group>"; };
+		22A202821F6157FE007B861E /* TempleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempleViewController.swift; sourceTree = "<group>"; };
 		22BF11261F0509C500ED0EEA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		22BF11281F050ADA00ED0EEA /* LCZoomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCZoomTransition.h; sourceTree = "<group>"; };
 		22BF11291F050ADA00ED0EEA /* LCZoomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCZoomTransition.m; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				225031301F36146900FE6DC9 /* List3ViewController.swift */,
 				225031321F36147C00FE6DC9 /* Create3ViewController.swift */,
 				2239AD591F36BEA7002B624C /* settingViewController.swift */,
+				22A202821F6157FE007B861E /* TempleViewController.swift */,
 			);
 			path = presentation.2;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				226DFEE51E9223AB002C4EF4 /* CreateViewController.swift in Sources */,
 				2250312B1F36141A00FE6DC9 /* Create1ViewController.swift in Sources */,
 				226DFEB71E9222BA002C4EF4 /* ViewController.swift in Sources */,
+				22A202831F6157FE007B861E /* TempleViewController.swift in Sources */,
 				225031331F36147C00FE6DC9 /* Create3ViewController.swift in Sources */,
 				226DFEB51E9222BA002C4EF4 /* AppDelegate.swift in Sources */,
 				225031311F36146900FE6DC9 /* List3ViewController.swift in Sources */,

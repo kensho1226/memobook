@@ -72,9 +72,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    
     //セルがタップされた時に呼び出されるメソッド
-    
     func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.memoNo = String(indexPath.row)
         self.performSegue(withIdentifier: "toCreate", sender: nil)
@@ -94,7 +92,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             zoomTransition.sourceView = self.table.cellForRow(at: table.indexPathForSelectedRow!)
         }
     }
-    
     @IBAction func back () {
         self.dismiss(animated: true, completion: nil)
     }
