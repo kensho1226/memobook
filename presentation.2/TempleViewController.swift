@@ -24,7 +24,7 @@ class TempleViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,10 +42,10 @@ class TempleViewController: UIViewController {
     */
     
     @IBAction func Temple1() {
-        temp1 = "重要度"
-        temp2 = "期限"
-        temp3 = ""
-        temp4 = ""
+        temp1 = "重要"
+        temp2 = "難しい"
+        temp3 = "重要でない"
+        temp4 = "簡単"
         
         saves.set(temp1, forKey: "label1")
         saves.set(temp2, forKey: "label2")
@@ -64,9 +64,9 @@ class TempleViewController: UIViewController {
     }
     
     @IBAction func Temple2 () {
-        temp1 = ""
+        temp1 = "個人"
         temp2 = "仕事"
-        temp3 = ""
+        temp3 = "集団"
         temp4 = "趣味"
         
         saves.set(temp1, forKey: "label1")
@@ -86,8 +86,8 @@ class TempleViewController: UIViewController {
     }
     
     @IBAction func Temple3 () {
-        temp1 = ""
-        temp2 = ""
+        temp1 = "重要度"
+        temp2 = "期限"
         temp3 = ""
         temp4 = ""
         

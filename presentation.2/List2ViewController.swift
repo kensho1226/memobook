@@ -13,6 +13,7 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var table: UITableView!
     
     var memoNo = ""
+    
     var zoomTransition:LCZoomTransition!
     
     var saves = UserDefaults.standard
@@ -20,6 +21,7 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     var titlenamearray:[String] = ["新規作成"]
     var memoarray:[String]  = [""]
     
+    var memonumber:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,9 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
+        memonumber = titlenamearray.count
+        
+        saves.set(titlenamearray.count - 1, forKey: "bluenumber")
     }
     
     override func didReceiveMemoryWarning() {

@@ -20,6 +20,7 @@ class List3ViewController: UIViewController,  UITableViewDataSource, UITableView
     var titlenamearray:[String] = ["新規作成"]
     var memoarray:[String]  = [""]
     
+    var memonumber:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,8 @@ class List3ViewController: UIViewController,  UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
+        memonumber = titlenamearray.count
+        saves.set(titlenamearray.count - 1, forKey: "greennumber")
     }
     
     override func didReceiveMemoryWarning() {

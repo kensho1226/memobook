@@ -21,11 +21,21 @@ class settingViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+//        label1.text = saves.object(forKey: "label1") as? String
+//        label2.text = saves.object(forKey: "label2") as? String
+//        label3.text = saves.object(forKey: "label3") as? String
+//        label4.text = saves.object(forKey: "label4") as? String
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewDidDisappear(animated)
+        
         label1.text = saves.object(forKey: "label1") as? String
         label2.text = saves.object(forKey: "label2") as? String
         label3.text = saves.object(forKey: "label3") as? String
         label4.text = saves.object(forKey: "label4") as? String
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,10 +89,6 @@ class settingViewController: UIViewController {
     
     @IBAction func back () {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool){
-        super.viewDidDisappear(animated)
     }
     
 
