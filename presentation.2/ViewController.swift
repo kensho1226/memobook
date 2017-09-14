@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     var saves = UserDefaults.standard
     var zoomTransition:LCZoomTransition!
     
-    @IBOutlet var label1:UILabel!
-    @IBOutlet var label2:UILabel!
-    @IBOutlet var label3:UILabel!
-    @IBOutlet var label4:UILabel!
+    @IBOutlet var label1:UILabel?
+    @IBOutlet var label2:UILabel?
+    @IBOutlet var label3:UILabel?
+    @IBOutlet var label4:UILabel?
     
     @IBOutlet var redmemonumber:UILabel!
     @IBOutlet var greenmemonumber:UILabel!
@@ -47,15 +47,17 @@ class ViewController: UIViewController {
     //データの更新
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
-        label1.text = saves.object(forKey: "label1") as? String
-        label2.text = saves.object(forKey: "label2") as? String
-        label3.text = saves.object(forKey: "label3") as? String
-        label4.text = saves.object(forKey: "label4") as? String
+        label1?.text = saves.object(forKey: "label1") as? String
+        label2?.text = saves.object(forKey: "label2") as? String
+        label3?.text = saves.object(forKey: "label3") as? String
+        label4?.text = saves.object(forKey: "label4") as? String
         
-        redmemonumber = saves.object(forKey: "rednumber") as! UILabel
-        bluememonumber = saves.object(forKey: "bluenumber") as! UILabel
-        greenmemonumber = saves.object(forKey: "greennumber") as! UILabel
-        yellowmemonumber = saves.object(forKey: "yellownumber") as! UILabel
+        
+        
+        redmemonumber.text = String(describing: saves.object(forKey: "rednumber") as! UILabel)
+        bluememonumber.text = String(describing: saves.object(forKey: "bluenumber") as! UILabel)
+        greenmemonumber.text = String(describing: saves.object(forKey: "greennumber") as! UILabel)
+        yellowmemonumber.text = String(describing: saves.object(forKey: "yellownumber") as! UILabel)
     }
     
     @IBAction func setting () {
