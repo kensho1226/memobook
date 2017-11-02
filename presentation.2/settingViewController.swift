@@ -29,11 +29,11 @@ class settingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
-        
-        label1.text = saves.object(forKey: "label1") as? String
-        label2.text = saves.object(forKey: "label2") as? String
-        label3.text = saves.object(forKey: "label3") as? String
-        label4.text = saves.object(forKey: "label4") as? String
+//        
+//        label1.text = saves.object(forKey: "label1") as? String
+//        label2.text = saves.object(forKey: "label2") as? String
+//        label3.text = saves.object(forKey: "label3") as? String
+//        label4.text = saves.object(forKey: "label4") as? String
     }
 
 
