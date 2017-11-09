@@ -28,6 +28,7 @@
 		2250312F1F36145600FE6DC9 /* Create2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250312E1F36145600FE6DC9 /* Create2ViewController.swift */; };
 		225031311F36146900FE6DC9 /* List3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225031301F36146900FE6DC9 /* List3ViewController.swift */; };
 		225031331F36147C00FE6DC9 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225031321F36147C00FE6DC9 /* Create3ViewController.swift */; };
+		22546F951FB46CEA00A3A65E /* checkristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22546F941FB46CEA00A3A65E /* checkristViewController.swift */; };
 		226DFEB51E9222BA002C4EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DFEB41E9222BA002C4EF4 /* AppDelegate.swift */; };
 		226DFEB71E9222BA002C4EF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DFEB61E9222BA002C4EF4 /* ViewController.swift */; };
 		226DFEBA1E9222BA002C4EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEB81E9222BA002C4EF4 /* Main.storyboard */; };
@@ -93,6 +94,7 @@
 		2250312E1F36145600FE6DC9 /* Create2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Create2ViewController.swift; sourceTree = "<group>"; };
 		225031301F36146900FE6DC9 /* List3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List3ViewController.swift; sourceTree = "<group>"; };
 		225031321F36147C00FE6DC9 /* Create3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Create3ViewController.swift; sourceTree = "<group>"; };
+		22546F941FB46CEA00A3A65E /* checkristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = checkristViewController.swift; path = ../checkristViewController.swift; sourceTree = "<group>"; };
 		226DFEB11E9222BA002C4EF4 /* presentation.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = presentation.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226DFEB41E9222BA002C4EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		226DFEB61E9222BA002C4EF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				225031321F36147C00FE6DC9 /* Create3ViewController.swift */,
 				2239AD591F36BEA7002B624C /* settingViewController.swift */,
 				22A202821F6157FE007B861E /* TempleViewController.swift */,
+				22546F941FB46CEA00A3A65E /* checkristViewController.swift */,
 			);
 			path = presentation.2;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BF112A1F050ADA00ED0EEA /* LCZoomTransition.m in Sources */,
+				22546F951FB46CEA00A3A65E /* checkristViewController.swift in Sources */,
 				2250312D1F36144300FE6DC9 /* List2ViewController.swift in Sources */,
 				226DFEE51E9223AB002C4EF4 /* CreateViewController.swift in Sources */,
 				2250312B1F36141A00FE6DC9 /* Create1ViewController.swift in Sources */,

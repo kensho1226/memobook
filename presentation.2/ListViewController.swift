@@ -18,13 +18,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var saves = UserDefaults.standard
     
     var titlenamearray:[String] = ["新規作成"]
-    var memoarray:[String]  = [""]
+    var memoarray:[String]  = ["新規作成"]
     
     var memonumber:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                        
         if  saves.object(forKey: "titlearray") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray") as! [String]
         }else{

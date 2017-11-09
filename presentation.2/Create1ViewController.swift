@@ -80,6 +80,8 @@ class Create1ViewController: UIViewController {
                 titleTextField.text = ""
                 memo.text = ""
                 
+                saves.set(titlenamearray.count - 1, forKey: "yellownumber")
+                
                 // アラートを作成
                 let alert = UIAlertController(
                     title: "保存完了", message: "保存しました", preferredStyle: .alert)
@@ -177,6 +179,8 @@ class Create1ViewController: UIViewController {
         
         saves.set(titlenamearray, forKey: "titlearray1")
         saves.set(memoarray, forKey: "memo1")
+        
+        saves.set(titlenamearray.count - 1, forKey: "yellownumber")
         
         // アラートを作成
         let alert = UIAlertController(

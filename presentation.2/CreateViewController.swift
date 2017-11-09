@@ -81,6 +81,7 @@ class CreateViewController: UIViewController {
                 saves.set(titlenamearray, forKey: "titlearray")
                 titleTextField.text = ""
                 memo.text = ""
+                saves.set(titlenamearray.count - 1, forKey: "rednumber")
                 
                 // アラートを作成
                 let alert = UIAlertController(
@@ -180,6 +181,8 @@ class CreateViewController: UIViewController {
         
         saves.set(titlenamearray, forKey: "titlearray")
         saves.set(memoarray, forKey: "memo")
+        
+        saves.set(titlenamearray.count - 1, forKey: "rednumber")
         
         // アラートを作成
         let alert = UIAlertController(

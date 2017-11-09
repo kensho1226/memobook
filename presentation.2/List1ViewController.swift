@@ -22,7 +22,7 @@ class List1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         if  saves.object(forKey: "titlearray1") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray1") as! [String]
         }else{
