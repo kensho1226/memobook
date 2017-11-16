@@ -59,15 +59,43 @@ class ViewController: UIViewController {
         greenmemonumber?.text = String(describing: saves.object(forKey: "greennumber")!)
         yellowmemonumber?.text = String(describing: saves.object(forKey: "yellownumber")!)
         
-        textColorChanger(label: redmemonumber!)
-        textColorChanger(label: bluememonumber!)
-        textColorChanger(label: greenmemonumber!)
-        textColorChanger(label: yellowmemonumber!)
+//        textColorChanger(label: redmemonumber!)
+//        textColorChanger(label: bluememonumber!)
+//        textColorChanger(label: greenmemonumber!)
+//        textColorChanger(label: yellowmemonumber!)
+        
+//        TextSizeChanger(label: redmemonumber!)
+//        TextSizeChanger(label: bluememonumber!)
+//        TextSizeChanger(label: greenmemonumber!)
+//        TextSizeChanger(label: yellowmemonumber!)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        TextSizeChanger(label: redmemonumber!)
+        TextSizeChanger(label: bluememonumber!)
+        TextSizeChanger(label: greenmemonumber!)
+        TextSizeChanger(label: yellowmemonumber!)
+        
     }
     
     func textColorChanger(label: UILabel){
         if Int(label.text!)! > 5 {
             label.textColor = UIColor.red
+        }
+    }
+    
+    func TextSizeChanger(label: UILabel) {
+        print(label.text)
+        if Int(label.text!)! >= 1 {
+            label.font = UIFont(name: "Trebuchet MS", size: 50)
+        }else if Int(label.text!)! >= 5 {
+            label.font = UIFont(name: "Trebuchet MS", size: 60)
+        }else if Int(label.text!)! >= 8 {
+            label.font = UIFont(name: "Trebuchet MS", size: 70)
+        }else if Int(label.text!)! >= 10 {
+            label.font = UIFont(name: "Trebuchet MS", size: 80)
+        }else{
+            label.font = UIFont(name: "Trebuchet MS", size: 90)
         }
     }
     
@@ -79,8 +107,5 @@ class ViewController: UIViewController {
         if segue.identifier == "toCreate" {
         }
     }
-
-
-
 }
 
