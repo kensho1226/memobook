@@ -86,16 +86,26 @@ class ViewController: UIViewController {
     
     func TextSizeChanger(label: UILabel) {
         print(label.text)
-        if Int(label.text!)! >= 1 {
+        if Int(label.text!)! <= 1 {
             label.font = UIFont(name: "Trebuchet MS", size: 50)
-        }else if Int(label.text!)! >= 5 {
+        }else if Int(label.text!)! == 2 {
+            label.font = UIFont(name: "Trebuchet MS", size: 53)
+        }else if Int(label.text!)! == 3 {
+            label.font = UIFont(name: "Trebuchet MS", size: 55)
+        }else if Int(label.text!)! == 4 {
+            label.font = UIFont(name: "Trebuchet MS", size: 58)
+        }else if Int(label.text!)! == 5 {
             label.font = UIFont(name: "Trebuchet MS", size: 60)
-        }else if Int(label.text!)! >= 8 {
+        }else if Int(label.text!)! == 6 {
+            label.font = UIFont(name: "Trebuchet MS", size: 63)
+        }else if Int(label.text!)! == 7 {
+            label.font = UIFont(name: "Trebuchet MS", size: 65)
+        }else if Int(label.text!)! == 8 {
+            label.font = UIFont(name: "Trebuchet MS", size: 67)
+        }else if Int(label.text!)! == 9 {
             label.font = UIFont(name: "Trebuchet MS", size: 70)
-        }else if Int(label.text!)! >= 10 {
-            label.font = UIFont(name: "Trebuchet MS", size: 80)
         }else{
-            label.font = UIFont(name: "Trebuchet MS", size: 90)
+            label.font = UIFont(name: "Trebuchet MS", size: 80)
         }
     }
     
