@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             label.textColor = UIColor.red
         }
     }
-    
+
     func TextSizeChanger(label: UILabel) {
         print(label.text)
         if Int(label.text!)! <= 1 {
