@@ -11,6 +11,7 @@
 		221EDB231E9347310055EF38 /* gray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 221EDB221E9347310055EF38 /* gray.jpg */; };
 		221EDB251E9368080055EF38 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 221EDB241E9368080055EF38 /* images.jpg */; };
 		221EDB271E936D6F0055EF38 /* Oranienbaum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 221EDB261E936D6F0055EF38 /* Oranienbaum.ttf */; };
+		2235048A1FEBC3F10043B2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEB81E9222BA002C4EF4 /* Main.storyboard */; };
 		2239AD5A1F36BEA7002B624C /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239AD591F36BEA7002B624C /* settingViewController.swift */; };
 		225031131F35A2FA00FE6DC9 /* Image_Load.png in Resources */ = {isa = PBXBuildFile; fileRef = 225031121F35A2FA00FE6DC9 /* Image_Load.png */; };
 		225031171F35F23700FE6DC9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 225031161F35F23700FE6DC9 /* icon.png */; };
@@ -30,7 +31,6 @@
 		225031331F36147C00FE6DC9 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225031321F36147C00FE6DC9 /* Create3ViewController.swift */; };
 		226DFEB51E9222BA002C4EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DFEB41E9222BA002C4EF4 /* AppDelegate.swift */; };
 		226DFEB71E9222BA002C4EF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DFEB61E9222BA002C4EF4 /* ViewController.swift */; };
-		226DFEBA1E9222BA002C4EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEB81E9222BA002C4EF4 /* Main.storyboard */; };
 		226DFEBC1E9222BA002C4EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEBB1E9222BA002C4EF4 /* Assets.xcassets */; };
 		226DFEBF1E9222BA002C4EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226DFEBD1E9222BA002C4EF4 /* LaunchScreen.storyboard */; };
 		226DFECA1E9222BA002C4EF4 /* presentation_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DFEC91E9222BA002C4EF4 /* presentation_2Tests.swift */; };
@@ -361,6 +361,7 @@
 				225031171F35F23700FE6DC9 /* icon.png in Resources */,
 				221EDB211E9342410055EF38 /* aaaaaaa.png in Resources */,
 				226DFEF11E92258F002C4EF4 /* NotoSansCJKjp-DemiLight.otf in Resources */,
+				2235048A1FEBC3F10043B2A6 /* Main.storyboard in Resources */,
 				226DFEF21E92258F002C4EF4 /* NotoSansCJKjp-Light.otf in Resources */,
 				226DFEBC1E9222BA002C4EF4 /* Assets.xcassets in Resources */,
 				221EDB231E9347310055EF38 /* gray.jpg in Resources */,
@@ -377,7 +378,6 @@
 				225031261F36023900FE6DC9 /* 矢印2.png in Resources */,
 				225031221F35FE8700FE6DC9 /* 赤.png in Resources */,
 				221EDB271E936D6F0055EF38 /* Oranienbaum.ttf in Resources */,
-				226DFEBA1E9222BA002C4EF4 /* Main.storyboard in Resources */,
 				226DFEF01E92258F002C4EF4 /* NotoSansCJKjp-Bold.otf in Resources */,
 				226DFEEF1E92258F002C4EF4 /* NotoSansCJKjp-Black.otf in Resources */,
 			);

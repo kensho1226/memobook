@@ -81,8 +81,8 @@ class settingViewController: UIViewController {
             let alert: UIAlertController = UIAlertController(title: "保存完了", message: "保存しました", preferredStyle: .alert)
             // アラートにボタンをつける
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
-                self.dismiss(animated: true, completion: nil)}))
-            
+                self.navigationController?.popToRootViewController(animated: true)}))
+        
             // アラート表示
             self.present(alert, animated: true, completion: nil)
     }
