@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -212,7 +211,7 @@
                                         <rect key="frame" x="0.0" y="28" width="323" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyN-qv-xUT" id="BsR-V7-R5u">
-                                            <rect key="frame" x="0.0" y="0.0" width="323" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -272,7 +271,7 @@
                                         <rect key="frame" x="0.0" y="28" width="299" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xwR-Me-Had" id="SOl-lQ-Aqh">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -429,7 +428,7 @@
                                         <rect key="frame" x="0.0" y="28" width="309" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hrX-18-Gcs" id="OUJ-II-ARm">
-                                            <rect key="frame" x="0.0" y="0.0" width="309" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="309" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -665,7 +664,7 @@
                                         <rect key="frame" x="0.0" y="28" width="299" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogr-2s-YmU" id="Yyg-mD-255">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -820,30 +819,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-Rn-Bzi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="緑.png" translatesAutoresizingMaskIntoConstraints="NO" id="cal-iP-CTd">
-                                <rect key="frame" x="185" y="344" width="190" height="274"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="矢印1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Rw-hI4">
+                                <rect key="frame" x="0.0" y="13" width="383" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="青.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4Q-Rq-Fg4">
-                                <rect key="frame" x="0.0" y="344" width="186" height="274"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="矢印2.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-pm-Fsa">
+                                <rect key="frame" x="175" y="137" width="25" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="黄色.png" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-KE-4yE">
-                                <rect key="frame" x="0.0" y="112" width="186" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="赤.png" translatesAutoresizingMaskIntoConstraints="NO" id="CGT-V6-1BP">
-                                <rect key="frame" x="185" y="112" width="190" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矢印1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Rw-hI4">
-                                <rect key="frame" x="-8" y="13" width="383" height="640"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矢印2.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-pm-Fsa">
-                                <rect key="frame" x="175" y="74" width="25" height="519"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="o8h-pm-Fsa" secondAttribute="height" multiplier="6:127" id="nV8-yY-aZ5"/>
-                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ink-5q-gth">
                                 <rect key="frame" x="185" y="330" width="163" height="30"/>
@@ -852,14 +834,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqo-iV-kRE">
-                                <rect key="frame" x="55" y="74" width="265" height="0.0"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-2M-lIe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-2M-lIe">
                                 <rect key="frame" x="55" y="627" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -871,27 +848,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-P8-Efl">
+                                <rect key="frame" x="55" y="99" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aU7-Rn-Bzi" secondAttribute="trailing" id="2mt-FB-5KL"/>
-                            <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="RIx-Rw-hI4" secondAttribute="bottom" constant="14" id="6CH-F2-NFR"/>
-                            <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="2h6-2M-lIe" secondAttribute="bottom" constant="10" id="7mP-Uo-CgZ"/>
-                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="top" secondItem="fqo-iV-kRE" secondAttribute="bottom" id="AGh-88-3NE"/>
-                            <constraint firstItem="RIx-Rw-hI4" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" constant="13" id="Dnh-lP-bgL"/>
-                            <constraint firstItem="aU7-Rn-Bzi" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" id="FIG-4s-dYe"/>
-                            <constraint firstItem="fqo-iV-kRE" firstAttribute="top" secondItem="wQj-Cg-JCJ" secondAttribute="bottom" constant="10" id="J50-VA-3VC"/>
-                            <constraint firstItem="RIx-Rw-hI4" firstAttribute="centerY" secondItem="ts0-wh-ibH" secondAttribute="centerY" id="M1d-PF-2yr"/>
-                            <constraint firstItem="aU7-Rn-Bzi" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" id="SIT-fh-2zH"/>
-                            <constraint firstItem="fqo-iV-kRE" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="TJ7-AB-PA5"/>
-                            <constraint firstItem="RIx-Rw-hI4" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" constant="-8" id="U7L-XO-TlJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2h6-2M-lIe" secondAttribute="trailing" constant="39" id="UKu-41-1by"/>
-                            <constraint firstItem="2h6-2M-lIe" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="a6G-bf-9j1"/>
-                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="centerX" secondItem="ts0-wh-ibH" secondAttribute="centerX" id="af8-FJ-P8j"/>
-                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="centerY" secondItem="ts0-wh-ibH" secondAttribute="centerY" id="iFf-mt-J8T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fqo-iV-kRE" secondAttribute="trailing" constant="39" id="jT8-kw-nyc"/>
-                            <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="aU7-Rn-Bzi" secondAttribute="bottom" id="nwB-K2-Hlb"/>
-                            <constraint firstAttribute="trailing" secondItem="RIx-Rw-hI4" secondAttribute="trailing" id="ueX-JU-5LJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aU7-Rn-Bzi" secondAttribute="trailing" id="9GR-UC-PBA"/>
+                            <constraint firstItem="aU7-Rn-Bzi" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" id="CTw-ab-AjK"/>
+                            <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="aU7-Rn-Bzi" secondAttribute="bottom" id="L2V-mB-evf"/>
+                            <constraint firstItem="aU7-Rn-Bzi" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" id="tdL-ZA-tqu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nnl-lu-mus">
@@ -920,7 +890,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="label1" destination="fqo-iV-kRE" id="JEt-s8-MMh"/>
+                        <outlet property="label1" destination="VVX-P8-Efl" id="NwU-Kz-Ggz"/>
                         <outlet property="label2" destination="ink-5q-gth" id="uWB-ii-wSC"/>
                         <outlet property="label3" destination="2h6-2M-lIe" id="PcD-z7-a4U"/>
                         <outlet property="label4" destination="pit-SP-xTj" id="Brc-p6-6lG"/>

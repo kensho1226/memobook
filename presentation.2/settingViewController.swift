@@ -16,15 +16,54 @@ class settingViewController: UIViewController {
     @IBOutlet var label2:UITextField!
     @IBOutlet var label3:UITextField!
     @IBOutlet var label4:UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        label1.text = saves.object(forKey: "label1") as? String
-//        label2.text = saves.object(forKey: "label2") as? String
-//        label3.text = saves.object(forKey: "label3") as? String
-//        label4.text = saves.object(forKey: "label4") as? String
+        for i in 1...4{
+            makeBackGroundView(num: i)
+        }
+        
+        
+                
+        
+    }
+    
+
+    func makeBackGroundView(num:Int){
+        
+        let spaceY:CGFloat = 50.0
+        
+        let viewWidth = UIScreen.main.bounds.width / 2
+        let viewHeight = UIScreen.main.bounds.height / 2
+        
+
+        var imageView:UIImageView = UIImageView()
+        
+        switch num {
+        case 1:
+            imageView.image = UIImage(named: "黄色")
+            imageView.frame = CGRect(x: 0, y: spaceY, width: viewWidth, height: viewHeight - spaceY)
+        case 2:
+            imageView.image = UIImage(named: "赤")
+            imageView.frame = CGRect(x: viewWidth, y: spaceY, width: viewWidth, height: viewHeight-spaceY)
+        case 3:
+            imageView.image = UIImage(named: "青")
+            imageView.frame = CGRect(x: 0, y: viewHeight, width: viewWidth, height: viewHeight-spaceY)
+        case 4:
+            imageView.image = UIImage(named: "緑")
+            imageView.frame = CGRect(x: viewWidth, y: viewHeight, width: viewWidth, height: viewHeight-spaceY)
+        default:
+            break
+        }
+        view.addSubview(imageView)
+
+    }
+    
+    func makeArrow(){
+        
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -44,35 +83,7 @@ class settingViewController: UIViewController {
     
     @IBAction func saveButton(sender: AnyObject) {
         
-//        if (label1.text?.isEmpty)! {
-//            let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
-//            // アラートにボタンをつける
-//            alert.addAction(UIAlertAction(title: "OK", style: .default))
-//            
-//            // アラート表示
-//            self.present(alert, animated: true, completion: nil)
-//        }else if (label2.text?.isEmpty)! {
-//            let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
-//            // アラートにボタンをつける
-//            alert.addAction(UIAlertAction(title: "OK", style: .default))
-//            
-//            // アラート表示
-//            self.present(alert, animated: true, completion: nil)
-//        }else if (label3.text?.isEmpty)! {
-//            let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
-//            // アラートにボタンをつける
-//            alert.addAction(UIAlertAction(title: "OK", style: .default))
-//            
-//            // アラート表示
-//            self.present(alert, animated: true, completion: nil)
-//        }else if (label4.text?.isEmpty)! {
-//            let alert: UIAlertController = UIAlertController(title: "保存できません", message: "タイトルを入力してください。", preferredStyle: .alert)
-//            // アラートにボタンをつける
-//            alert.addAction(UIAlertAction(title: "OK", style: .default))
-//            
-//            // アラート表示
-//            self.present(alert, animated: true, completion: nil)
-//        }else{
+
             saves.set(label1.text, forKey: "label1")
             saves.set(label2.text, forKey: "label2")
             saves.set(label3.text, forKey: "label3")
@@ -90,16 +101,5 @@ class settingViewController: UIViewController {
     @IBAction func back () {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
