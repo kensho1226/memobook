@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,13 +95,6 @@
                                 <rect key="frame" x="162" y="101" width="50" height="523"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重要" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKc-dX-aTl">
-                                <rect key="frame" x="188" y="344" width="155" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansCJKjp-DemiLight" family="Noto Sans CJK JP" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重要でない" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsf-1b-MOz">
                                 <rect key="frame" x="2" y="347" width="184" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -145,6 +139,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="簡単" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dua-G0-bPL">
                                 <rect key="frame" x="16" y="626" width="343" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKjp-DemiLight" family="Noto Sans CJK JP" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重要" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKc-dX-aTl">
+                                <rect key="frame" x="188" y="0.0" width="155" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKjp-DemiLight" family="Noto Sans CJK JP" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -838,9 +839,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矢印1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Rw-hI4">
                                 <rect key="frame" x="-8" y="13" width="383" height="640"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="矢印2.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-pm-Fsa">
-                                <rect key="frame" x="163.5" y="112" width="48" height="506"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="矢印2.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-pm-Fsa">
+                                <rect key="frame" x="175" y="74" width="25" height="519"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o8h-pm-Fsa" secondAttribute="height" multiplier="6:127" id="nV8-yY-aZ5"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ink-5q-gth">
                                 <rect key="frame" x="185" y="330" width="163" height="30"/>
@@ -850,7 +853,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqo-iV-kRE">
-                                <rect key="frame" x="55" y="74" width="265" height="30"/>
+                                <rect key="frame" x="55" y="74" width="265" height="0.0"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -874,14 +877,18 @@
                             <constraint firstAttribute="trailing" secondItem="aU7-Rn-Bzi" secondAttribute="trailing" id="2mt-FB-5KL"/>
                             <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="RIx-Rw-hI4" secondAttribute="bottom" constant="14" id="6CH-F2-NFR"/>
                             <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="2h6-2M-lIe" secondAttribute="bottom" constant="10" id="7mP-Uo-CgZ"/>
+                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="top" secondItem="fqo-iV-kRE" secondAttribute="bottom" id="AGh-88-3NE"/>
                             <constraint firstItem="RIx-Rw-hI4" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" constant="13" id="Dnh-lP-bgL"/>
                             <constraint firstItem="aU7-Rn-Bzi" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" id="FIG-4s-dYe"/>
                             <constraint firstItem="fqo-iV-kRE" firstAttribute="top" secondItem="wQj-Cg-JCJ" secondAttribute="bottom" constant="10" id="J50-VA-3VC"/>
+                            <constraint firstItem="RIx-Rw-hI4" firstAttribute="centerY" secondItem="ts0-wh-ibH" secondAttribute="centerY" id="M1d-PF-2yr"/>
                             <constraint firstItem="aU7-Rn-Bzi" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" id="SIT-fh-2zH"/>
                             <constraint firstItem="fqo-iV-kRE" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="TJ7-AB-PA5"/>
                             <constraint firstItem="RIx-Rw-hI4" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" constant="-8" id="U7L-XO-TlJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2h6-2M-lIe" secondAttribute="trailing" constant="39" id="UKu-41-1by"/>
                             <constraint firstItem="2h6-2M-lIe" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="a6G-bf-9j1"/>
+                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="centerX" secondItem="ts0-wh-ibH" secondAttribute="centerX" id="af8-FJ-P8j"/>
+                            <constraint firstItem="o8h-pm-Fsa" firstAttribute="centerY" secondItem="ts0-wh-ibH" secondAttribute="centerY" id="iFf-mt-J8T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fqo-iV-kRE" secondAttribute="trailing" constant="39" id="jT8-kw-nyc"/>
                             <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="aU7-Rn-Bzi" secondAttribute="bottom" id="nwB-K2-Hlb"/>
                             <constraint firstAttribute="trailing" secondItem="RIx-Rw-hI4" secondAttribute="trailing" id="ueX-JU-5LJ"/>
@@ -959,7 +966,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="テンプレートを選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRz-o7-Prb">
-                                <rect key="frame" x="62" y="91" width="251.5" height="40"/>
+                                <rect key="frame" x="62" y="91" width="252" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
