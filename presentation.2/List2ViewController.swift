@@ -29,7 +29,7 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
         if  saves.object(forKey: "titlearray2") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray2") as! [String]
         }else{
-            titlenamearray = [""]
+            titlenamearray = ["新規作成"]
         }
         
         let tblBackColor: UIColor = UIColor.clear

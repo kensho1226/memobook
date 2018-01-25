@@ -104,7 +104,6 @@ class Create1ViewController: UIViewController {
         print("Title: ", titlenamearray)
         print("memo: ", titlenamearray)
         
-        
         if saves.object(forKey: "memo1") != nil && titlenamearray.count != 0 && memoNo != ""{
             memoarray = saves.object(forKey: "memo1") as! [String]
             print(memoarray)

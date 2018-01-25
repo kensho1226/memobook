@@ -101,8 +101,11 @@ class CreateViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        if saves.object(forKey: "titleArray") != nil {
+            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        }
         
-        titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        
         print("Title: ", titlenamearray)
         print("memo: ", titlenamearray)
     

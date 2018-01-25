@@ -22,12 +22,6 @@ class List1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        if  saves.object(forKey: "titlearray1") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray1") as! [String]
-        }else{
-            titlenamearray = [""]
-        }
         
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
@@ -48,6 +42,17 @@ class List1ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
+        
+        if  saves.object(forKey: "titlearray1") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray1") as! [String]
+            //            titlenamearray.insert("新規作成", at: 0)
+        }else{
+            titlenamearray = ["新規作成"]
+            saves.set(titlenamearray, forKey: "titlearray1")
+            memoarray = [""]
+            saves.set(memoarray, forKey: "memo1")
+        }
+        
         saves.set(titlenamearray.count - 1, forKey: "yellownumber")
     }
     
@@ -80,10 +85,10 @@ class List1ViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.performSegue(withIdentifier: "toCreate1", sender: nil)
     }
     
-    @IBAction func memoplus () {
-        memoNo = ""
-        performSegue(withIdentifier: "toCreate1", sender: self)
-    }
+//    @IBAction func memoplus () {
+//        memoNo = ""
+//        performSegue(withIdentifier: "toCreate1", sender: self)
+//    }
     
     // Segueを設定
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

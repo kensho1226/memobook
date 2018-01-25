@@ -28,7 +28,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if  saves.object(forKey: "titlearray") as? [String] != nil{
             titlenamearray = saves.object(forKey: "titlearray") as! [String]
         }else{
-            titlenamearray = [""]
+            titlenamearray = ["新規作成"]
         }
         
         let tblBackColor: UIColor = UIColor.clear

@@ -54,10 +54,56 @@ class ViewController: UIViewController {
         label3?.text = saves.object(forKey: "label3") as? String
         label4?.text = saves.object(forKey: "label4") as? String
         
-        redmemonumber?.text = String(describing: saves.object(forKey: "rednumber")!)
-        bluememonumber?.text = String(describing: saves.object(forKey: "bluenumber")!)
-        greenmemonumber?.text = String(describing: saves.object(forKey: "greennumber")!)
-        yellowmemonumber?.text = String(describing: saves.object(forKey: "yellownumber")!)
+        if saves.object(forKey: "label1") == nil {
+            label1?.text = "難しい"
+        }else{
+            label1?.text = String(describing: saves.object(forKey: "label1")!)
+        }
+        
+        if saves.object(forKey: "label2") == nil {
+            label2?.text = "重要"
+        }else{
+            label2?.text = String(describing: saves.object(forKey: "label2")!)
+        }
+        
+        if saves.object(forKey: "label3") == nil {
+            label3?.text = "簡単"
+        }else{
+            label3?.text = String(describing: saves.object(forKey: "label3")!)
+        }
+        
+        if saves.object(forKey: "label4") == nil {
+            label4?.text = "重要でない"
+        }else{
+            label4?.text = String(describing: saves.object(forKey: "label4")!)
+        }
+        
+        if saves.object(forKey: "rednumber") == nil {
+            redmemonumber?.text = "0"
+        }else{
+            redmemonumber?.text = String(describing: saves.object(forKey: "rednumber")!)
+        }
+        
+        if saves.object(forKey: "bluenumber") == nil {
+            bluememonumber?.text = "0"
+        }else{
+            bluememonumber?.text = String(describing: saves.object(forKey: "bluenumber")!)
+
+        }
+        
+        if saves.object(forKey: "greennumber") == nil {
+            greenmemonumber?.text = "0"
+        }else{
+            greenmemonumber?.text = String(describing: saves.object(forKey: "greennumber")!)
+        }
+        
+        if saves.object(forKey: "yellownumber") == nil {
+            yellowmemonumber?.text = "0"
+        }else{
+            yellowmemonumber?.text = String(describing: saves.object(forKey: "yellownumber")!)
+            
+        }
+        
         
 //        textColorChanger(label: redmemonumber!)
 //        textColorChanger(label: bluememonumber!)
