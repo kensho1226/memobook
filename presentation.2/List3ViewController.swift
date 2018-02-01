@@ -25,12 +25,6 @@ class List3ViewController: UIViewController,  UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if  saves.object(forKey: "titlearray3") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray3") as! [String]
-        }else{
-            titlenamearray = ["新規作成"]
-        }
-        
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
         
@@ -50,6 +44,14 @@ class List3ViewController: UIViewController,  UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
+        if  saves.object(forKey: "titlearray3") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray3") as! [String]
+        }else{
+            titlenamearray = ["新規作成"]
+            saves.set(titlenamearray, forKey: "titlearray3")
+            memoarray = [""]
+            saves.set(memoarray, forKey: "memo3")
+        }
         memonumber = titlenamearray.count
         saves.set(titlenamearray.count - 1, forKey: "greennumber")
     }

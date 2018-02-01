@@ -26,7 +26,7 @@
         <scene sceneID="DeA-Zg-paY">
             <objects>
                 <navigationController id="R8p-AO-Wtf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5f7-Jg-vAU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5f7-Jg-vAU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -801,7 +801,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Plo-wm-1Rj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="FSc-qq-Tdy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FSc-qq-Tdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -830,7 +830,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="矢印1.png" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-Rw-hI4">
-                                <rect key="frame" x="0.0" y="13" width="383" height="640"/>
+                                <rect key="frame" x="0.0" y="13" width="375" height="640"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="矢印2.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-pm-Fsa">
@@ -844,9 +844,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-2M-lIe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-2M-lIe">
                                 <rect key="frame" x="55" y="627" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -858,9 +857,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-P8-Efl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVX-P8-Efl">
                                 <rect key="frame" x="55" y="99" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -868,9 +866,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VVX-P8-Efl" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="3Gz-cP-pKa"/>
                             <constraint firstAttribute="trailing" secondItem="aU7-Rn-Bzi" secondAttribute="trailing" id="9GR-UC-PBA"/>
                             <constraint firstItem="aU7-Rn-Bzi" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leading" id="CTw-ab-AjK"/>
+                            <constraint firstItem="2h6-2M-lIe" firstAttribute="leading" secondItem="ts0-wh-ibH" secondAttribute="leadingMargin" constant="39" id="JY1-W6-gB1"/>
                             <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="aU7-Rn-Bzi" secondAttribute="bottom" id="L2V-mB-evf"/>
+                            <constraint firstItem="VVX-P8-Efl" firstAttribute="top" secondItem="wQj-Cg-JCJ" secondAttribute="bottom" constant="35" id="fhX-Iy-nQc"/>
+                            <constraint firstItem="fEU-x0-euJ" firstAttribute="top" secondItem="2h6-2M-lIe" secondAttribute="bottom" constant="10" id="oly-jH-mjk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VVX-P8-Efl" secondAttribute="trailing" constant="39" id="s7A-4I-yKT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2h6-2M-lIe" secondAttribute="trailing" constant="39" id="syN-Wn-zyv"/>
                             <constraint firstItem="aU7-Rn-Bzi" firstAttribute="top" secondItem="ts0-wh-ibH" secondAttribute="top" id="tdL-ZA-tqu"/>
                         </constraints>
                     </view>
@@ -946,7 +950,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="テンプレートを選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRz-o7-Prb">
-                                <rect key="frame" x="62" y="91" width="252" height="40"/>
+                                <rect key="frame" x="61.5" y="91" width="252" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKjp-Bold" family="Noto Sans CJK JP" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -986,7 +990,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ocH-SQ-xwG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="z8u-gs-pG5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="z8u-gs-pG5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1005,7 +1009,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pz9-ED-sh6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="aQG-hy-7ub">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aQG-hy-7ub">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1024,7 +1028,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bum-ZH-Jzq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="vFf-WY-KJO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vFf-WY-KJO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

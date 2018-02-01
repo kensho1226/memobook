@@ -18,18 +18,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var saves = UserDefaults.standard
     
     var titlenamearray:[String] = ["新規作成"]
-    var memoarray:[String]  = ["新規作成"]
+    var memoarray:[String]  = [""]
     
-    var memonumber:Int!
+//    var memonumber:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
-        if  saves.object(forKey: "titlearray") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray") as! [String]
-        }else{
-            titlenamearray = ["新規作成"]
-        }
         
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
@@ -50,7 +44,16 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
-        memonumber = titlenamearray.count
+        
+        if  saves.object(forKey: "titlearray") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray") as! [String]
+        }else{
+            titlenamearray = ["新規作成"]
+            saves.set(titlenamearray, forKey: "titlearray")
+            memoarray = [""]
+            saves.set(memoarray, forKey: "memo")
+        }
+//        memonumber = titlenamearray.count
         saves.set(titlenamearray.count - 1, forKey: "rednumber")
     }
     

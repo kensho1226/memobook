@@ -26,12 +26,6 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if  saves.object(forKey: "titlearray2") as? [String] != nil{
-            titlenamearray = saves.object(forKey: "titlearray2") as! [String]
-        }else{
-            titlenamearray = ["新規作成"]
-        }
-        
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
         
@@ -51,6 +45,15 @@ class List2ViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(_ animated: Bool){
         super.viewDidDisappear(animated)
         table.reloadData()
+        
+        if  saves.object(forKey: "titlearray2") as? [String] != nil{
+            titlenamearray = saves.object(forKey: "titlearray2") as! [String]
+        }else{
+            titlenamearray = ["新規作成"]
+            saves.set(titlenamearray, forKey: "titlearray2")
+            memoarray = [""]
+            saves.set(memoarray, forKey: "memo2")
+        }
         memonumber = titlenamearray.count
         
         saves.set(titlenamearray.count - 1, forKey: "bluenumber")
