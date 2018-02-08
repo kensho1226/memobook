@@ -120,7 +120,6 @@ class ViewController: UIViewController {
         TextSizeChanger(label: greenmemonumber.titleLabel!)
         TextSizeChanger(label: yellowmemonumber.titleLabel!)
     }
-    
     func textColorChanger(label: UILabel){
         if Int(label.text!)! > 5 {
             label.textColor = UIColor.red
@@ -130,25 +129,25 @@ class ViewController: UIViewController {
     func TextSizeChanger(label: UILabel) {
         print(label.text)
         if Int(label.text!)! <= 1 {
-            label.font = UIFont(name: "Trebuchet MS", size: 50)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 60)
         }else if Int(label.text!)! == 2 {
-            label.font = UIFont(name: "Trebuchet MS", size: 53)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 65)
         }else if Int(label.text!)! == 3 {
-            label.font = UIFont(name: "Trebuchet MS", size: 55)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 70)
         }else if Int(label.text!)! == 4 {
-            label.font = UIFont(name: "Trebuchet MS", size: 58)
+            label.font = UIFont(name: "THiragino Mincho ProN", size: 75)
         }else if Int(label.text!)! == 5 {
-            label.font = UIFont(name: "Trebuchet MS", size: 60)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 80)
         }else if Int(label.text!)! == 6 {
-            label.font = UIFont(name: "Trebuchet MS", size: 63)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 85)
         }else if Int(label.text!)! == 7 {
-            label.font = UIFont(name: "Trebuchet MS", size: 65)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 87)
         }else if Int(label.text!)! == 8 {
-            label.font = UIFont(name: "Trebuchet MS", size: 67)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 90)
         }else if Int(label.text!)! == 9 {
-            label.font = UIFont(name: "Trebuchet MS", size: 70)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 93)
         }else{
-            label.font = UIFont(name: "Trebuchet MS", size: 80)
+            label.font = UIFont(name: "Hiragino Mincho ProN", size: 96)
         }
     }
     
