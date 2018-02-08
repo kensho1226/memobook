@@ -19,10 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet var label3:UILabel?
     @IBOutlet var label4:UILabel?
     
-    @IBOutlet var redmemonumber:UILabel?
-    @IBOutlet var greenmemonumber:UILabel?
-    @IBOutlet var bluememonumber:UILabel?
-    @IBOutlet var yellowmemonumber:UILabel?
+    @IBOutlet var redmemonumber:UIButton!
+    @IBOutlet var greenmemonumber:UIButton!
+    @IBOutlet var bluememonumber:UIButton!
+    @IBOutlet var yellowmemonumber:UIButton!
     
     var number: Int = 0
     
@@ -79,31 +79,29 @@ class ViewController: UIViewController {
         }
         
         if saves.object(forKey: "rednumber") == nil {
-            redmemonumber?.text = "0"
+            redmemonumber.setTitle("0", for: .normal)
+
         }else{
-            redmemonumber?.text = String(describing: saves.object(forKey: "rednumber")!)
+            redmemonumber.setTitle(String(describing: saves.object(forKey: "rednumber")), for: .normal)
         }
         
         if saves.object(forKey: "bluenumber") == nil {
-            bluememonumber?.text = "0"
+            bluememonumber?.setTitle("0", for: .normal)
         }else{
-            bluememonumber?.text = String(describing: saves.object(forKey: "bluenumber")!)
-
+            bluememonumber?.setTitle(String(describing: saves.object(forKey: "bluenumber")!), for: .normal)
         }
         
         if saves.object(forKey: "greennumber") == nil {
-            greenmemonumber?.text = "0"
+            greenmemonumber?.setTitle("0", for: .normal)
         }else{
-            greenmemonumber?.text = String(describing: saves.object(forKey: "greennumber")!)
+            greenmemonumber?.setTitle(String(describing: saves.object(forKey: "greennumber")!), for: .normal)
         }
         
         if saves.object(forKey: "yellownumber") == nil {
-            yellowmemonumber?.text = "0"
+            yellowmemonumber?.setTitle("0", for: .normal)
         }else{
-            yellowmemonumber?.text = String(describing: saves.object(forKey: "yellownumber")!)
-            
+            yellowmemonumber?.setTitle(String(describing: saves.object(forKey: "yellownumber")!), for: .normal)
         }
-        
         
 //        textColorChanger(label: redmemonumber!)
 //        textColorChanger(label: bluememonumber!)
@@ -117,11 +115,10 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        TextSizeChanger(label: redmemonumber!)
-        TextSizeChanger(label: bluememonumber!)
-        TextSizeChanger(label: greenmemonumber!)
-        TextSizeChanger(label: yellowmemonumber!)
-        
+        TextSizeChanger(label: redmemonumber.titleLabel!)
+        TextSizeChanger(label: bluememonumber.titleLabel!)
+        TextSizeChanger(label: greenmemonumber.titleLabel!)
+        TextSizeChanger(label: yellowmemonumber.titleLabel!)
     }
     
     func textColorChanger(label: UILabel){
