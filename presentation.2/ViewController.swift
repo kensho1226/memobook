@@ -39,6 +39,11 @@ class ViewController: UIViewController {
 //        saves.set(gnumber, forKey: "greennumber")
 //        saves.set(ynumber, forKey: "yellownumber")
 
+        
+//        saves.object(forKey: "rednumber")
+        
+//        saves.set(1, forKey: "rednumber")
+//        (forKey: "rednumber")
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,7 +87,7 @@ class ViewController: UIViewController {
             redmemonumber.setTitle("0", for: .normal)
 
         }else{
-            redmemonumber.setTitle(String(describing: saves.object(forKey: "rednumber")), for: .normal)
+            redmemonumber.setTitle(String(describing: saves.object(forKey: "rednumber")!), for: .normal)
         }
         
         if saves.object(forKey: "bluenumber") == nil {
@@ -115,6 +120,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        redmemonumber.titleLabel?.text = "1"
         TextSizeChanger(label: redmemonumber.titleLabel!)
         TextSizeChanger(label: bluememonumber.titleLabel!)
         TextSizeChanger(label: greenmemonumber.titleLabel!)
@@ -127,7 +134,7 @@ class ViewController: UIViewController {
     }
 
     func TextSizeChanger(label: UILabel) {
-        print(label.text)
+    print(label.text)
         if Int(label.text!)! <= 1 {
             label.font = UIFont(name: "Hiragino Mincho ProN", size: 60)
         }else if Int(label.text!)! == 2 {
